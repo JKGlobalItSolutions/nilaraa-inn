@@ -16,6 +16,8 @@ const ContactSection = () => {
       description: "We'll get back to you shortly. Thank you for choosing Nilaara Inn.",
     });
     setForm({ name: '', phone: '', email: '', roomType: '', message: '' });
+    // Redirect to reservation page after form submission
+    window.location.href = "/reservation";
   };
 
   const inputClass =

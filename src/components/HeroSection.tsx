@@ -95,6 +95,14 @@ const HeroSection = () => {
                 cursor: "pointer",
                 border: "none",
               }}
+              onClick={() => {
+                const contactSection = document.querySelector('#contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = "/#contact";
+                }
+              }}
             >
               Book Now
             </button>
@@ -108,6 +116,14 @@ const HeroSection = () => {
                 backdropFilter: "blur(10px)",
                 color: "white",
                 cursor: "pointer",
+              }}
+              onClick={() => {
+                const roomsSection = document.querySelector('#rooms');
+                if (roomsSection) {
+                  roomsSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = "/#rooms";
+                }
               }}
             >
               View Rooms →
