@@ -44,7 +44,7 @@ const HeroSection = () => {
           zIndex: 10,
           display: "flex",
           alignItems: "center",
-          minHeight: "100vh",
+          minHeight: "110vh",
           padding: "0 60px",
         }}
       >

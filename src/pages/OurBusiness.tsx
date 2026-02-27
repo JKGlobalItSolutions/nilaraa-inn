@@ -49,7 +49,7 @@ const branches = [
       'Health & Wellness Essentials',
     ],
     hours: '8:00 AM – 11:00 PM',
-    address: 'No.9G/2 Polur Road(new bus stand opp)Tiruvannamalai',
+    address: 'No.9G/2 Polur Road(old bus stand opp)Tiruvannamalai',
     phone: '9786603234,994094394',
   },
   {
