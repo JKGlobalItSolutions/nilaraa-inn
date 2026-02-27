@@ -37,8 +37,8 @@ const branches = [
   },
   {
     icon: Pill,
-    name: 'Sri Arunachalam Medicals',
-    since: 'No.9G/2 Polur Road(new bus stand opp)Tiruvannamalai',
+    name: 'Sri Arunachala Medicals',
+    since: 'No.9G/2 Polur Road(old bus stand opp)Tiruvannamalai',
     tagline: 'Reliable. Accessible. Trusted.',
     description:
       'Located at No.9G/2 Polur road, this branch ensures quick and efficient access to essential medicines and healthcare products. We are dedicated to prompt service and customer satisfaction.',
@@ -50,11 +50,11 @@ const branches = [
     ],
     hours: '8:00 AM – 11:00 PM',
     address: 'No.9G/2 Polur Road(new bus stand opp)Tiruvannamalai',
-    phone: '9786603234',
+    phone: '9786603234,994094394',
   },
   {
     icon: Stethoscope,
-    name: 'Sri Arunachala Medicals',
+    name: 'Sri Arunachalam Medicals',
     since: 'No.5C Big Street,Tiruvannamalai',
     tagline: 'Convenient Healthcare Access',
     description:
@@ -66,7 +66,7 @@ const branches = [
       'Prescription Services',
     ],
     hours: '8:00 AM – 11:00 PM',
-    address: 'No.5C Big Street',
+    address: 'No.5C Big Street,Tiruvannamalai,Tamil nadu-606 601',
     phone: '9486050399,6369414575',
   },
 ];
