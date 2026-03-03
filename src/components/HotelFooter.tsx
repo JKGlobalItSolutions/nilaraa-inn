@@ -17,17 +17,17 @@ const HotelFooter = () => {
   <img
     src={logo}
     alt="Nilaara Inn Residency"
-    className="h-16 w-auto object-contain"
+    className="h-20 w-auto object-contain"
   />
 
-  <div className="leading-tight">
+  {/* <div className="leading-tight">
     <h2 className="text-yellow-400 font-serif text-xl font-semibold">
       Nilaara Inn
     </h2>
     <p className="text-white/80 text-sm tracking-[4px] uppercase">
       Residency
     </p>
-  </div>
+  </div> */}
 </div>
             <p className="text-[hsl(var(--footer-foreground))]/70 text-sm leading-relaxed">
               Your premium boutique hotel in Tiruvannamalai. Experience luxury, comfort, and warm hospitality.

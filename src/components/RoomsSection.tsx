@@ -19,7 +19,7 @@ const rooms = [
     beds: ['1 Queen Bed'],
     capacity: 4,
     price: 2500,
-    available: 1,
+    available: 2,
     description: 'Elegant double room with sophisticated décor and everything you need for a relaxing stay.',
   },
 ];

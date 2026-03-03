@@ -78,14 +78,15 @@ const Navbar = ({ isDark, onToggleTheme }: NavbarProps) => {
             className="h-20 w-auto object-contain"
           />
 
-          <div className="leading-tight text-left">
+          {/* <div className="leading-tight text-left">
             <h1 className="text-yellow-400 font-serif text-xl font-semibold tracking-wide">
               Nilaara Inn
             </h1>
             <p className="text-white text-xs tracking-[4px] uppercase">
               Residency
             </p>
-          </div>
+          </div> */}
+          
         </button>
 
         {/* DESKTOP MENU */}
