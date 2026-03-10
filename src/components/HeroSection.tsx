@@ -61,7 +61,7 @@ const HeroSection = () => {
             }}
           >
             Experience Divine Comfort <br />
-            at Nilaara Inn
+            at Nilaara Inn 
           </motion.h1>
 
           <motion.p
@@ -75,8 +75,7 @@ const HeroSection = () => {
               lineHeight: 1.6,
             }}
           >
-            Stay just minutes away from Arunachaleswarar Temple.
-            Premium rooms, peaceful ambience, and unforgettable hospitality.
+            Nilaara Inn – A peaceful and comfortable stay in the heart of Tiruvannamalai, welcoming pilgrims and travelers with warmth and care.
           </motion.p>
 
           <motion.div

@@ -21,8 +21,7 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">About Nilaara Inn</h2>
           <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Experience premium comfort and divine serenity in Tiruvannamalai,
-            just minutes away from the sacred Arunachaleswarar Temple.
+            Located in the sacred town of Tiruvannamalai, Nilaara Inn was established in 2025 with the aim of providing comfortable and welcoming accommodation for pilgrims and travelers visiting this spiritually significant destination.
           </p>
         </motion.div>
 
@@ -107,15 +106,12 @@ const AboutSection = () => {
             <h3 className="text-2xl font-bold text-foreground mb-6">A Stay Close to Divinity</h3>
             
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Located just 1.2 km from the Arunachaleswarar Temple,
-              Nilaara Inn offers a peaceful and luxurious stay for
-              pilgrims and travelers.
+            Home to the revered Arunachaleswarar Temple, Tiruvannamalai attracts devotees and visitors from across India and around the world. Nilaara Inn was created to offer guests a clean, peaceful, and reliable place to stay while experiencing the spiritual atmosphere of the town.
+
             </p>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              With modern amenities, elegant interiors, and warm
-              hospitality, we ensure a memorable experience
-              in Tiruvannamalai.
+              With a focus on comfort, cleanliness, and warm hospitality, Nilaara Inn strives to ensure every guest enjoys a pleasant and memorable stay.
             </p>
 
             <ul className="space-y-2 text-muted-foreground">
@@ -137,6 +133,52 @@ const AboutSection = () => {
               </li>
             </ul>
           </motion.div>
+
+
+
+{/* About the Proprietor - Full Width */}
+<motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.7 }}
+  className="mt-20 md:col-span-2 bg-background/60 backdrop-blur-md rounded-2xl p-10 border border-primary/20 shadow-xl"
+>
+  <h3 className="text-3xl font-serif font-bold text-foreground mb-2">
+    About the Proprietor
+  </h3>
+
+  <p className="text-primary font-semibold text-lg">
+    Mr. Abineshwar Ganesan
+  </p>
+
+  <p className="text-sm text-muted-foreground mb-6">
+    Founder & Proprietor – Nilaara Inn
+  </p>
+
+  <p className="text-muted-foreground leading-relaxed mb-4">
+    Mr. Abineshwar Ganesan, son of Mr. Ganesan Chinnasamy, is the founder and proprietor
+    of Nilaara Inn. A native of Tiruvannamalai with international exposure through his
+    education in London, he holds a B.Pharm and an MBA (IBM), London.
+  </p>
+
+  <p className="text-muted-foreground leading-relaxed mb-6">
+    He comes from a family with more than 40 years of experience in pharmacy and retail
+    business in Tiruvannamalai, successfully operating three pharmacies and a hardware
+    store in the town. Through Nilaara Inn, he continues this tradition of service,
+    trust, and hospitality for visitors to the town.
+  </p>
+
+  <h4 className="text-xl font-semibold text-foreground mb-2">
+    Vision
+  </h4>
+
+  <p className="text-muted-foreground leading-relaxed">
+    Our vision is to provide a comfortable, peaceful, and trustworthy place to stay for
+    pilgrims and travelers visiting Tiruvannamalai, ensuring every guest experiences
+    warm hospitality and a pleasant stay.
+  </p>
+</motion.div>
         </div>
       </div>
     </section>
