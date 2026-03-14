@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, BedDouble, Sofa } from "lucide-react";
+import { Users, BedDouble, Sofa, Wifi, Tv, Wind, Coffee } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -7,170 +7,229 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "./ui/carousel";
-
 import Autoplay from "embla-carousel-autoplay";
 
-// Images
-import deluxeImg from "../assets/deluxe.jpg";
-import suiteImg from "../assets/suite.png";
-import suiteImg2 from "../assets/suite1.png";
-import suiteImg3 from "../assets/suite2.png";
-import suiteImg4 from "../assets/suite3.png";
-import suiteImg5 from "../assets/suite4.png";
+/* ---------------- IMAGES ---------------- */
 
+// Suite Room 1
+import room1a from "../assets/room1/1.png";
+import room1b from "../assets/room1/2.png";
+import room1c from "../assets/room1/3.png";
+import room1d from "../assets/room1/4.png";
 
-// ================= ROOMS DATA =================
-const rooms = [
+// Suite Room 2
+import room2a from "../assets/room2/1.png";
+import room2b from "../assets/room2/2.png";
+import room2c from "../assets/room2/3.png";
+import room2d from "../assets/room2/4.png";
+
+// Deluxe Room 1
+import room3a from "../assets/room3/1.png";
+import room3b from "../assets/room3/2.png";
+import room3c from "../assets/room3/3.png";
+import room3d from "../assets/room3/4.png";
+
+// Deluxe Room 2
+import room4a from "../assets/room4/1.png";
+import room4b from "../assets/room4/2.png";
+import room4c from "../assets/room4/3.png";
+
+/* ---------------- ROOMS DATA ---------------- */
+
+const roomTypes = [
   {
     title: "Suite Room",
-    images: [deluxeImg,suiteImg, suiteImg2, suiteImg3, suiteImg5],
-    beds: ["2 Queen Beds", "1 Single Bed", "1 Sofa Bed"],
-    capacity: 6,
     price: 3500,
-    available: 2,
-    description:
-      "Spacious suite with premium amenities, perfect for families or groups seeking ultimate comfort.",
+
+    rooms: [
+      {
+        name: "Suite Room 1",
+        images: [room1a, room1b, room1c, room1d],
+        guests: 6,
+        beds: ["2 Queen Beds", "1 Single Bed", "1 Sofa Bed"],
+        amenities: ["WiFi", "Smart TV", "AC", "Coffee Maker"],
+      },
+      {
+        name: "Suite Room 2",
+        images: [room2a, room2b, room2c, room2d],
+        guests: 6,
+        beds: ["2 Queen Beds", "1 Sofa Bed"],
+        amenities: ["WiFi", "Smart TV", "AC", "Mini Fridge"],
+      },
+    ],
   },
+
   {
-    title: "Deluxe Double Room",
-    images: [suiteImg2,suiteImg4,suiteImg], // single image still works
-    beds: ["1 Queen Bed"],
-    capacity: 4,
+    title: "Deluxe Room",
     price: 2500,
-    available: 2,
-    description:
-      "Elegant double room with sophisticated décor and everything needed for a relaxing stay.",
+
+    rooms: [
+      {
+        name: "Deluxe Room 1",
+        images: [room3a, room3b, room3c, room3d],
+        guests: 4,
+        beds: ["1 Queen Bed"],
+        amenities: ["WiFi", "TV", "AC"],
+      },
+      {
+        name: "Deluxe Room 2",
+        images: [room4a, room4b, room4c],
+        guests: 4,
+        beds: ["1 Queen Bed"],
+        amenities: ["WiFi", "TV", "AC"],
+      },
+    ],
   },
 ];
 
-// ================= COMPONENT =================
+/* ---------------- COMPONENT ---------------- */
+
 const RoomsSection = () => {
   return (
-    <section id="rooms" className="py-24 px-6 bg-secondary/30">
+    <section id="rooms" className="py-24 px-6 bg-secondary/30 dark:bg-[#14061F]">
       <div className="container mx-auto max-w-6xl">
 
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <p className="text-primary tracking-widest uppercase text-sm mb-3">
+
+        <div className="text-center mb-16">
+          <p className="tracking-widest uppercase text-sm mb-3 text-[#873260] dark:text-[#D4AF37]">
             Accommodations
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-[#873260] dark:text-[#D4AF37]">
             Our Rooms
           </h2>
 
-          <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
-        </motion.div>
+          <div className="w-20 h-1 bg-[#873260] dark:bg-[#D4AF37] mx-auto rounded-full" />
+        </div>
 
-        {/* Rooms Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {rooms.map((room, i) => (
-            <motion.div
-              key={room.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              viewport={{ once: true }}
-              className="group glass rounded-2xl overflow-hidden card-hover"
-            >
-              {/* ================= IMAGE SLIDER ================= */}
-              <div className="relative h-64 overflow-hidden">
+        <div className="space-y-20">
+          {roomTypes.map((type, index) => (
+            <div key={index}>
 
-                <Carousel
-                  opts={{ loop: true }}
-                  plugins={[
-                    Autoplay({
-                      delay: 3500,
-                      stopOnInteraction: false,
-                    }),
-                  ]}
-                  className="w-full h-full"
-                >
-                  <CarouselContent className="h-full">
-                    {room.images.map((img, index) => (
-                      <CarouselItem
-                        key={index}
-                        className="basis-full h-full"
-                      >
-                        <img
-                          src={img}
-                          alt={`${room.title}-${index}`}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
+              {/* Room Type Title */}
 
-                  <CarouselPrevious className="left-3" />
-                  <CarouselNext className="right-3" />
-                </Carousel>
+              <h3 className="text-3xl font-serif font-bold mb-8 text-[#873260] dark:text-[#D4AF37]">
+                {type.title}
+              </h3>
 
-                {/* Price */}
-                <div className="absolute top-4 right-4 badge-theme px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  ₹{room.price.toLocaleString()} / night
-                </div>
+              {/* Rooms Grid */}
 
-                {/* Availability */}
-                <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium">
-                  {room.available} Rooms Available
-                </div>
-              </div>
+              <div className="grid md:grid-cols-2 gap-10">
 
-              {/* ================= DETAILS ================= */}
-              <div className="p-6">
-                <h3 className="text-2xl font-serif font-bold mb-2">
-                  {room.title}
-                </h3>
-
-                <p className="text-muted-foreground text-sm mb-4">
-                  {room.description}
-                </p>
-
-                {/* Beds */}
-                <div className="flex flex-wrap gap-3 mb-4">
-                  {room.beds.map((bed) => (
-                    <span
-                      key={bed}
-                      className="flex items-center gap-1.5 text-sm bg-secondary/70 px-3 py-1.5 rounded-lg"
-                    >
-                      {bed.includes("Sofa") ? (
-                        <Sofa size={14} />
-                      ) : (
-                        <BedDouble size={14} />
-                      )}
-                      {bed}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Footer */}
-                <div className="flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Users size={16} />
-                    Up to {room.capacity} guests
-                  </span>
-
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() =>
-                      (window.location.href = "/reservation")
-                    }
-                    className="btn-gradient px-6 py-2.5 rounded-full text-sm font-semibold"
+                {type.rooms.map((room, i) => (
+                  <motion.div
+                    key={room.name}
+                    initial={{ opacity: 0, y: 60 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: i * 0.15 }}
+                    viewport={{ once: true }}
+                    className="group rounded-2xl overflow-hidden
+                    bg-white dark:bg-[#1A0B2E]
+                    border border-gray-200 dark:border-[#2a1b3f]
+                    shadow-lg hover:shadow-2xl
+                    transition-all duration-500 hover:-translate-y-3"
                   >
-                    Book Now
-                  </motion.button>
-                </div>
+
+                    {/* Slider */}
+
+                    <div className="relative h-64 overflow-hidden">
+
+                      <Carousel
+                        opts={{ loop: true }}
+                        plugins={[Autoplay({ delay: 3500 })]}
+                        className="w-full h-full"
+                      >
+                        <CarouselContent>
+                          {room.images.map((img, index) => (
+                            <CarouselItem key={index}>
+                              <img
+                                src={img}
+                                alt={room.name}
+                                className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                              />
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+
+                        <CarouselPrevious />
+                        <CarouselNext />
+                      </Carousel>
+
+                      {/* Price */}
+
+                      <div className="absolute top-4 right-4 bg-[#873260] dark:bg-[#D4AF37] text-white dark:text-black px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
+                        ₹{type.price} / night
+                      </div>
+                    </div>
+
+                    {/* Content */}
+
+                    <div className="p-6 space-y-4">
+
+                      <h4 className="text-xl font-semibold dark:text-white">
+                        {room.name}
+                      </h4>
+
+                      {/* Beds */}
+
+                      <div className="flex flex-wrap gap-2">
+                        {room.beds.map((bed) => (
+                          <span
+                            key={bed}
+                            className="flex items-center gap-1 text-xs bg-gray-100 dark:bg-[#23133a] px-2 py-1 rounded-md"
+                          >
+                            {bed.includes("Sofa") ? (
+                              <Sofa size={12} />
+                            ) : (
+                              <BedDouble size={12} />
+                            )}
+                            {bed}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Guests */}
+
+                      <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                        <Users size={14} />
+                        Up to {room.guests} Guests
+                      </div>
+
+                      {/* Amenities */}
+
+                      <div className="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-400">
+                        {room.amenities.map((a) => (
+                          <span
+                            key={a}
+                            className="bg-gray-100 dark:bg-[#23133a] px-2 py-1 rounded-md"
+                          >
+                            {a}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Button */}
+
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => (window.location.href = "/reservation")}
+                        className="mt-3 bg-[#C8A04D] hover:bg-[#b9913f] text-black px-6 py-2 rounded-full text-sm font-semibold transition shadow-md"
+                      >
+                        Book Now
+                      </motion.button>
+
+                    </div>
+
+                  </motion.div>
+                ))}
+
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
+
       </div>
     </section>
   );

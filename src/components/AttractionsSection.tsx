@@ -9,8 +9,6 @@ import cave from "../assets/virupaksha-cave.jpg";
 import jain from "../assets/Jain.jpg";
 import road from "../assets/road.png";
 
-
-
 const attractions = [
   {
     name: 'Arulmigu Arunachaleswarar Temple',
@@ -72,7 +70,10 @@ const attractions = [
 
 const AttractionsSection = () => {
   return (
-    <section id="attractions" className="py-24 px-6 bg-secondary/30">
+    <section
+      id="attractions"
+      className="py-24 px-6 bg-secondary/30 dark:bg-[#14061F]"
+    >
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -81,9 +82,16 @@ const AttractionsSection = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Explore</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-4">Tourist Attractions</h2>
-          <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
+          <p className="font-medium tracking-widest uppercase text-sm mb-3 text-[#873260] dark:text-[#D4AF37]">
+            Explore
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-[#873260] dark:text-[#D4AF37]">
+            Tourist Attractions
+          </h2>
+
+          <div className="w-20 h-1 mx-auto rounded-full bg-[#873260] dark:bg-[#D4AF37]" />
+
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
             Discover the spiritual and scenic wonders near Nilaara Inn
           </p>
@@ -112,7 +120,9 @@ const AttractionsSection = () => {
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.7 }}
                     />
+
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
+
                     {/* Distance badge */}
                     <motion.div
                       className="absolute top-3 right-3 badge-theme px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1"
@@ -132,10 +142,12 @@ const AttractionsSection = () => {
                       <div className="w-8 h-8 rounded-lg btn-gradient flex items-center justify-center">
                         <Icon size={16} />
                       </div>
-                      <h3 className="font-serif font-bold text-foreground text-lg leading-tight">
+
+                      <h3 className="font-serif font-bold text-lg leading-tight text-[#873260] dark:text-[#D4AF37]">
                         {attraction.name}
                       </h3>
                     </div>
+
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {attraction.description}
                     </p>

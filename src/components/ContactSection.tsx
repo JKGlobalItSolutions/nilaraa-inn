@@ -16,7 +16,7 @@ const ContactSection = () => {
       description: "We'll get back to you shortly. Thank you for choosing Nilaara Inn.",
     });
     setForm({ name: '', phone: '', email: '', roomType: '', message: '' });
-    // Redirect to reservation page after form submission
+
     window.location.href = "/reservation";
   };
 
@@ -24,8 +24,12 @@ const ContactSection = () => {
     "w-full bg-transparent border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground/60 focus-glow transition-all duration-300";
 
   return (
-    <section id="contact" className="py-24 px-6">
+    <section
+      id="contact"
+      className="py-24 px-6 dark:bg-[#14061F]"
+    >
       <div className="container mx-auto max-w-6xl">
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,12 +37,19 @@ const ContactSection = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Reservations</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Book Your Stay</h2>
-          <div className="w-20 h-1 btn-gradient mx-auto rounded-full" />
+          <p className="font-medium tracking-widest uppercase text-sm mb-3 text-[#873260] dark:text-[#D4AF37]">
+            Reservations
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-[#873260] dark:text-[#D4AF37]">
+            Book Your Stay
+          </h2>
+
+          <div className="w-20 h-1 mx-auto rounded-full bg-[#873260] dark:bg-[#D4AF37]" />
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-8">
+
           {/* Left: Map & Info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -47,7 +58,7 @@ const ContactSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:col-span-2 space-y-6"
           >
-            {/* Google Map Embed */}
+            {/* Google Map */}
             <div className="glass rounded-2xl overflow-hidden glow-shadow">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.123456789!2d79.0747!3d12.2253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjNNRitQV1YgVGlydXZhbm5hbWFsYWksIFRhbWlsIE5hZHU!5e0!3m2!1sen!2sin!4v1700000000000"
@@ -64,41 +75,53 @@ const ContactSection = () => {
 
             {/* Contact Details */}
             <div className="glass rounded-2xl p-6 glow-shadow space-y-5">
-              <h3 className="text-xl font-serif font-bold text-foreground">Get In Touch</h3>
-              
+              <h3 className="text-xl font-serif font-bold text-[#873260] dark:text-[#D4AF37]">
+                Get In Touch
+              </h3>
+
               <div className="flex items-start gap-3">
-                <MapPin size={20} className="text-primary mt-0.5 shrink-0" />
+                <MapPin size={20} className="text-[#873260] dark:text-[#D4AF37] mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground text-sm">Address</p>
-                  <p className="text-muted-foreground text-sm">11/7, Anna Salai, Tiruvannamalai, Tamil Nadu – 606601</p>
+                  <p className="text-muted-foreground text-sm">
+                    11/7, Anna Salai, Tiruvannamalai, Tamil Nadu – 606601
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone size={20} className="text-primary mt-0.5 shrink-0" />
+                <Phone size={20} className="text-[#873260] dark:text-[#D4AF37] mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground text-sm">Phone</p>
-                  <a href="tel:+91XXXXXXXXXX" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  <a
+                    href="tel:+91XXXXXXXXXX"
+                    className="text-muted-foreground text-sm hover:text-[#873260] dark:hover:text-[#D4AF37] transition-colors"
+                  >
                     +91 8220663700
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Mail size={20} className="text-primary mt-0.5 shrink-0" />
+                <Mail size={20} className="text-[#873260] dark:text-[#D4AF37] mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground text-sm">Email</p>
-                  <a href="mailto:info@nilaara.in" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  <a
+                    href="mailto:info@nilaara.in"
+                    className="text-muted-foreground text-sm hover:text-[#873260] dark:hover:text-[#D4AF37] transition-colors"
+                  >
                     nilaarainn@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock size={20} className="text-primary mt-0.5 shrink-0" />
+                <Clock size={20} className="text-[#873260] dark:text-[#D4AF37] mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground text-sm">Check-in / Check-out</p>
-                  <p className="text-muted-foreground text-sm">Check-in: 12:00 PM · Check-out: 11:00 AM</p>
+                  <p className="text-muted-foreground text-sm">
+                    Check-in: 12:00 PM · Check-out: 11:00 AM
+                  </p>
                 </div>
               </div>
             </div>
@@ -113,7 +136,10 @@ const ContactSection = () => {
             onSubmit={handleSubmit}
             className="lg:col-span-3 glass rounded-2xl p-8 md:p-10 glow-shadow space-y-5"
           >
-            <h3 className="text-xl font-serif font-bold text-foreground mb-2">Make a Reservation</h3>
+            <h3 className="text-xl font-serif font-bold mb-2 text-[#873260] dark:text-[#D4AF37]">
+              Make a Reservation
+            </h3>
+
             <div className="grid md:grid-cols-2 gap-5">
               <input
                 type="text"
@@ -123,6 +149,7 @@ const ContactSection = () => {
                 onChange={e => setForm({ ...form, name: e.target.value })}
                 className={inputClass}
               />
+
               <input
                 type="tel"
                 placeholder="Phone Number"
@@ -132,6 +159,7 @@ const ContactSection = () => {
                 className={inputClass}
               />
             </div>
+
             <input
               type="email"
               placeholder="Email Address"
@@ -140,6 +168,7 @@ const ContactSection = () => {
               onChange={e => setForm({ ...form, email: e.target.value })}
               className={inputClass}
             />
+
             <select
               value={form.roomType}
               onChange={e => setForm({ ...form, roomType: e.target.value })}
@@ -150,6 +179,7 @@ const ContactSection = () => {
               <option value="suite">Suite Room – ₹3,500/night</option>
               <option value="deluxe">Deluxe Double Room – ₹2,500/night</option>
             </select>
+
             <textarea
               placeholder="Your Message or Special Requests"
               rows={4}
@@ -157,6 +187,7 @@ const ContactSection = () => {
               onChange={e => setForm({ ...form, message: e.target.value })}
               className={inputClass + ' resize-none'}
             />
+
             <motion.button
               type="submit"
               whileHover={{ scale: 1.02 }}
@@ -166,7 +197,9 @@ const ContactSection = () => {
               <Send size={20} />
               Book Now
             </motion.button>
+
           </motion.form>
+
         </div>
       </div>
     </section>
