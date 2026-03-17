@@ -27,7 +27,7 @@ import room3d from "../assets/room3/4.png";
 
 // ================= ROOM 4 =================
 import room4a from "../assets/room4/1.png";
-import room4b from "../assets/room4/2.png";
+import room4b from "../assets/room4/2.jpg";
 import room4c from "../assets/room4/3.png";
 
 

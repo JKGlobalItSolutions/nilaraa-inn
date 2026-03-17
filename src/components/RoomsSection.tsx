@@ -31,8 +31,9 @@ import room3d from "../assets/room3/4.png";
 
 // Deluxe Room 2
 import room4a from "../assets/room4/1.png";
-import room4b from "../assets/room4/2.png";
+import room4b from "../assets/room4/2.jpg";
 import room4c from "../assets/room4/3.png";
+// import room4d from "../assets/room4/4.jpg";
 
 /* ---------------- ROOMS DATA ---------------- */
 
@@ -47,14 +48,14 @@ const roomTypes = [
         images: [room1a, room1b, room1c, room1d],
         guests: 6,
         beds: ["2 Queen Beds", "1 Single Bed", "1 Sofa Bed"],
-        amenities: ["WiFi", "Smart TV", "AC", "Coffee Maker"],
+        amenities: ["WiFi", "Smart TV", "AC"],
       },
       {
         name: "Suite Room 2",
         images: [room2a, room2b, room2c, room2d],
         guests: 6,
-        beds: ["2 Queen Beds", "1 Sofa Bed"],
-        amenities: ["WiFi", "Smart TV", "AC", "Mini Fridge"],
+        beds: ["2 Queen Beds",  "1 Single Bed","1 Sofa Bed"],
+        amenities: ["WiFi", "Smart TV", "AC","Chair"],
       },
     ],
   },
@@ -73,7 +74,7 @@ const roomTypes = [
       },
       {
         name: "Deluxe Room 2",
-        images: [room4a, room4b, room4c],
+        images: [room4a, room4b, room4c ],
         guests: 4,
         beds: ["1 Queen Bed"],
         amenities: ["WiFi", "TV", "AC"],

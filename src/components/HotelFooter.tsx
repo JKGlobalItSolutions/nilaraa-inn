@@ -75,7 +75,7 @@ const HotelFooter = () => {
           <p className="text-xs text-[hsl(var(--footer-foreground))]/50">
             © {new Date().getFullYear()} Nilaara Inn. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             {[Instagram, Facebook, Twitter].map((Icon, i) => (
               <motion.a
                 key={i}
@@ -86,7 +86,7 @@ const HotelFooter = () => {
                 <Icon size={18} />
               </motion.a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -1,7 +1,23 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import heroImg from "../assets/hero-hotel.png";
+import heroImg2 from "../assets/gallery-1.png";
 
 const HeroSection = () => {
+  // ✅ Detect Mobile Screen
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <section
       style={{
@@ -19,8 +35,9 @@ const HeroSection = () => {
           inset: 0,
         }}
       >
+        {/* ✅ Image changes based on device */}
         <img
-          src={heroImg}
+          src={isMobile ? heroImg2 : heroImg}
           alt="Luxury Stay"
           style={{
             width: "100%",
@@ -28,6 +45,7 @@ const HeroSection = () => {
             objectFit: "cover",
           }}
         />
+
         <div
           style={{
             position: "absolute",
@@ -37,7 +55,7 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Hero Content */}
+      {/* ---------------- EXISTING UI (UNCHANGED) ---------------- */}
       <div
         style={{
           position: "relative",
@@ -61,7 +79,7 @@ const HeroSection = () => {
             }}
           >
             Experience Divine Comfort <br />
-            at Nilaara Inn 
+            at Nilaara Inn
           </motion.h1>
 
           <motion.p
@@ -95,12 +113,10 @@ const HeroSection = () => {
                 border: "none",
               }}
               onClick={() => {
-                const contactSection = document.querySelector('#contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = "/#contact";
-                }
+                const contactSection = document.querySelector("#contact");
+                contactSection
+                  ? contactSection.scrollIntoView({ behavior: "smooth" })
+                  : (window.location.href = "/#contact");
               }}
             >
               Book Now
@@ -117,12 +133,10 @@ const HeroSection = () => {
                 cursor: "pointer",
               }}
               onClick={() => {
-                const roomsSection = document.querySelector('#rooms');
-                if (roomsSection) {
-                  roomsSection.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = "/#rooms";
-                }
+                const roomsSection = document.querySelector("#rooms");
+                roomsSection
+                  ? roomsSection.scrollIntoView({ behavior: "smooth" })
+                  : (window.location.href = "/#rooms");
               }}
             >
               View Rooms →
@@ -131,7 +145,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Infinite Scroll Bar */}
+      {/* Infinite Scroll Bar (UNCHANGED) */}
       <div
         style={{
           position: "absolute",
@@ -173,16 +187,11 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Inline Keyframes */}
       <style>
         {`
           @keyframes scrollSlow {
-            0% {
-              transform: translateX(0%);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
           }
         `}
       </style>
