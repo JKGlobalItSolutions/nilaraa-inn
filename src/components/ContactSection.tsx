@@ -188,15 +188,21 @@ const ContactSection = () => {
               className={inputClass + ' resize-none'}
             />
 
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full btn-gradient py-4 rounded-xl text-lg font-semibold shimmer flex items-center justify-center gap-3 transition-all duration-300 glow-shadow hover:glow-shadow-lg"
-            >
-              <Send size={20} />
-              Book Now
-            </motion.button>
+          <motion.button
+  type="button"
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.98 }}
+  onClick={() =>
+    window.open(
+      "https://wa.me/918220663700?text=Hello%20I%20would%20like%20to%20book%20a%20room%20at%20Nilaara%20Inn",
+      "_blank"
+    )
+  }
+  className="w-full btn-gradient py-4 rounded-xl text-lg font-semibold shimmer flex items-center justify-center gap-3 transition-all duration-300 glow-shadow hover:glow-shadow-lg"
+>
+  <Send size={20} />
+  Book Now
+</motion.button>
 
           </motion.form>
 

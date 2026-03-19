@@ -212,14 +212,19 @@ const RoomsSection = () => {
 
                       {/* Button */}
 
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => (window.location.href = "/reservation")}
-                        className="mt-3 bg-[#C8A04D] hover:bg-[#b9913f] text-black px-6 py-2 rounded-full text-sm font-semibold transition shadow-md"
-                      >
-                        Book Now
-                      </motion.button>
+                 <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() =>
+    window.open(
+      "https://wa.me/918220663700?text=Hello%2C%20I%20want%20to%20check%20room%20availability%20and%20pricing.",
+      "_blank"
+    )
+  }
+  className="mt-3 bg-[#C8A04D] hover:bg-[#b9913f] text-black px-6 py-2 rounded-full text-sm font-semibold transition shadow-md"
+>
+  Book Now
+</motion.button>
 
                     </div>
 

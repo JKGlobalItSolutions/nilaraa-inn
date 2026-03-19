@@ -95,7 +95,15 @@ const Navbar = ({ isDark, onToggleTheme }: NavbarProps) => {
             <button
               key={link.href}
               onClick={() => handleNavigation(link.href)}
-              className="relative text-sm font-medium text-white/80 hover:text-yellow-400 transition-colors duration-300 group"
+              className="relative text-m font-bold text-white/80 hover:text-yellow-400 transition-colors duration-300 group"
+              style={{
+                fontWeight: 200,
+                fontSize: '20px',
+                letterSpacing: '0.4px',
+                textRendering: 'optimizeLegibility',
+                WebkitFontSmoothing: 'antialiased',
+                textShadow: '0 1px 2px rgba(0,0,0,0.35)'
+              }}
             >
               {link.label}
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
@@ -142,11 +150,19 @@ const Navbar = ({ isDark, onToggleTheme }: NavbarProps) => {
           >
             <div className="px-8 py-6 flex flex-col gap-5">
               {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => handleNavigation(link.href)}
-                  className="text-left text-white/80 hover:text-yellow-400 text-base"
-                >
+              <button
+                key={link.href}
+                onClick={() => handleNavigation(link.href)}
+                className="text-left text-white/80 hover:text-yellow-400 text-base"
+                style={{
+                  fontWeight: 600,
+                  fontSize: '16px',
+                  letterSpacing: '0.4px',
+                  textRendering: 'optimizeLegibility',
+                  WebkitFontSmoothing: 'antialiased',
+                  textShadow: '0 1px 2px rgba(0,0,0,0.35)'
+                }}
+              >
                   {link.label}
                 </button>
               ))}

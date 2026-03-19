@@ -102,25 +102,25 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.5 }}
             style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}
           >
-            <button
-              style={{
-                backgroundColor: "white",
-                color: "black",
-                padding: "12px 28px",
-                borderRadius: "10px",
-                fontWeight: 500,
-                cursor: "pointer",
-                border: "none",
-              }}
-              onClick={() => {
-                const contactSection = document.querySelector("#contact");
-                contactSection
-                  ? contactSection.scrollIntoView({ behavior: "smooth" })
-                  : (window.location.href = "/#contact");
-              }}
-            >
-              Book Now
-            </button>
+         <button
+  style={{
+    backgroundColor: "white",
+    color: "black",
+    padding: "12px 28px",
+    borderRadius: "10px",
+    fontWeight: 500,
+    cursor: "pointer",
+    border: "none",
+  }}
+  onClick={() =>
+    window.open(
+      "https://wa.me/918220663700?text=Hello%2C%20I%20want%20to%20check%20room%20availability%20and%20pricing.",
+      "_blank"
+    )
+  }
+>
+  Book Now
+</button>
 
             <button
               style={{
