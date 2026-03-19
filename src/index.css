@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salina+Roman+VF:wght@500;600;700&family=Salina+Book:wght@400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -57,6 +57,10 @@
     --sidebar-accent-foreground: 290 44% 22%;
     --sidebar-border: 280 22% 87%;
     --sidebar-ring: 45 76% 52%;
+
+    /* Typography Variables */
+    --font-heading: "Salina Roman VF", serif;
+    --font-body: "Salina Book", serif;
   }
 
   .dark {
@@ -110,11 +114,14 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4 {
-    font-family: 'Playfair Display', Georgia, serif;
+  /* All headings using Salina Roman VF */
+  h1, h2, h3, h4, h5, h6,
+  .section-title, .page-title, .card-title, .hero-title,
+  .nav-title, .modal-title, .room-title {
+    font-family: var(--font-heading);
   }
 }
 
