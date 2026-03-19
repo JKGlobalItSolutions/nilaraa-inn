@@ -9,7 +9,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="py-16 md:py-24 px-4 md:px-6 bg-secondary/30 dark:bg-[#14061F]"
+      className="py-16 md:py-24 px-4 md:px-6 bg-secondary/30 dark:bg-black"
     >
       <div className="container mx-auto max-w-6xl">
         {/* Title */}
@@ -71,18 +71,21 @@ const AboutSection = () => {
                   backdrop-blur-xl"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <div
-                    className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 
-                    border-2 overflow-hidden border-[#873260]/40
-                    bg-gradient-to-br from-[#873260] to-[#a85c85]
-                    p-2 shadow-lg"
-                  >
-                    <img
-                      src={logoImage}
-                      alt="Nilaara Inn Logo"
-                      className="w-full h-full object-contain brightness-0 invert"
-                    />
-                  </div>
+     <div
+  className="relative w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-4
+  border border-white/30
+  bg-white/20 backdrop-blur-md
+  shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+  overflow-hidden"
+>
+  <img
+    src={logoImage}
+    alt="Nilaara Inn Logo"
+    className="w-[85%] h-[85%] object-contain
+    transition-transform duration-500 ease-in-out
+    hover:scale-110"
+  />
+</div>
 
                   <h3 className="text-xl md:text-2xl font-serif font-bold mb-2 text-[#873260] dark:text-[#D4AF37]">
                     Nilaara Inn

@@ -25,7 +25,7 @@ const AmenitiesSection = () => {
   return (
     <section
       id="amenities"
-      className="py-24 px-6 bg-secondary/30 dark:bg-[#14061F]"
+      className="py-24 px-6 bg-secondary/30 dark:bg-black"
     >
       <div className="container mx-auto max-w-5xl">
 

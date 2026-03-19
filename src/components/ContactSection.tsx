@@ -26,7 +26,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-24 px-6 dark:bg-[#14061F]"
+      className="py-24 px-6 dark:bg-black"
     >
       <div className="container mx-auto max-w-6xl">
 
